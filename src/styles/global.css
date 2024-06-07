@@ -3,26 +3,67 @@
 @tailwind utilities;
 
 @layer base {
+	@font-face {
+		font-family: "MyFont";
+		src: url("/GeistMono-Regular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+	}
+
 	:root,
 	:root[data-theme="light"] {
 		color-scheme: light;
 		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
-		--theme-bg: 0deg 0% 98%;
 		--theme-link: 172deg 18% 41%;
-		--theme-text: 203deg 11% 15%;
-		--theme-accent: 351deg 66% 48%;
 		--theme-accent-2: 0deg 0% 7%;
-		--theme-quote: 351deg 66% 48%;
+
+		--background: 262 33% 100%;
+		--foreground: 262 75% 3%;
+		--muted: 82 33% 94%;
+		--muted-foreground: 82 1% 27%;
+		--popover: 0 0% 99%;
+		--popover-foreground: 262 75% 2%;
+		--card: 0 0% 99%;
+		--card-foreground: 262 75% 2%;
+		--border: 262 3% 92%;
+		--input: 262 3% 92%;
+		--primary: 262 42% 61%;
+		--primary-foreground: 0 0% 0%;
+		--secondary: 82 42% 61%;
+		--secondary-foreground: 82 42% 1%;
+		--accent: 82 42% 61%;
+		--accent-foreground: 82 42% 1%;
+		--destructive: 15 86% 27%;
+		--destructive-foreground: 15 86% 87%;
+		--ring: 262 42% 61%;
+		--radius: 0.5rem;
 	}
 
 	:root[data-theme="dark"] {
 		color-scheme: dark;
-		--theme-bg: 210deg 6% 12%;
 		--theme-link: 330deg 49% 67%;
-		--theme-text: 220deg 3% 79%;
-		--theme-accent: 159deg 64% 45%;
 		--theme-accent-2: 0deg 0% 93%;
-		--theme-quote: 102deg 100% 86%;
+
+		--background: 262 54% 4%;
+		--foreground: 262 37% 97%;
+		--muted: 82 33% 6%;
+		--muted-foreground: 82 1% 73%;
+		--popover: 262 54% 5%;
+		--popover-foreground: 262 37% 98%;
+		--card: 262 54% 5%;
+		--card-foreground: 262 37% 98%;
+		--border: 262 3% 15%;
+		--input: 262 3% 15%;
+		--primary: 262 42% 61%;
+		--primary-foreground: 0 0% 0%;
+		--secondary: 82 42% 61%;
+		--secondary-foreground: 82 42% 1%;
+		--accent: 82 42% 61%;
+		--accent-foreground: 82 42% 1%;
+		--destructive: 15 86% 47%;
+		--destructive-foreground: 0 0% 100%;
+		--ring: 262 42% 61%;
 	}
 
 	html {
@@ -30,6 +71,6 @@
 	}
 
 	body {
-		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-16 font-mono text-sm font-normal text-textColor antialiased;
+		@apply font-myFont bg-background text-foreground mx-auto flex min-h-screen max-w-3xl flex-col px-8 pt-16 text-sm font-normal antialiased;
 	}
 }

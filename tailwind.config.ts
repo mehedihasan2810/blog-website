@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable perfectionist/sort-objects */
 import type { Config } from "tailwindcss";
 
 import { fontFamily } from "tailwindcss/defaultTheme";
@@ -41,17 +44,46 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				accent: "hsl(var(--theme-accent) / <alpha-value>)",
+				// accent: "hsl(var(--theme-accent) / <alpha-value>)",
 				"accent-2": "hsl(var(--theme-accent-2) / <alpha-value>)",
-				bgColor: "hsl(var(--theme-bg) / <alpha-value>)",
-				link: "hsl(var(--theme-link) / <alpha-value>)",
-				quote: "hsl(var(--theme-quote) / <alpha-value>)",
-				textColor: "hsl(var(--theme-text) / <alpha-value>)",
+				// "accent-2": "hsl(var(--foreground) / <alpha-value>)",
+				// bgColor: "hsl(var(--theme-bg) / <alpha-value>)",
+				link: "hsl(var(--primary) / <alpha-value>)",
+				// quote: "hsl(var(--theme-quote) / <alpha-value>)",
+				quote: "hsl(var(--primary) / <alpha-value>)",
+				// textColor: "hsl(var(--theme-text) / <alpha-value>)",
+
+				border: "hsl(var(--border))",
+				input: "hsl(var(--input))",
+				ring: "hsl(var(--ring))",
+				background: "hsl(var(--background))",
+				foreground: "hsl(var(--foreground))",
+				primary: {
+					DEFAULT: "hsl(var(--primary))",
+					foreground: "hsl(var(--primary-foreground))",
+				},
+				secondary: {
+					DEFAULT: "hsl(var(--secondary))",
+					foreground: "hsl(var(--secondary-foreground))",
+				},
+				destructive: {
+					DEFAULT: "hsl(var(--destructive))",
+					foreground: "hsl(var(--destructive-foreground))",
+				},
+				muted: {
+					DEFAULT: "hsl(var(--muted))",
+					foreground: "hsl(var(--muted-foreground))",
+				},
+				accent: {
+					DEFAULT: "hsl(var(--accent))",
+					foreground: "hsl(var(--accent-foreground))",
+				},
 			},
 			fontFamily: {
 				// Add any custom fonts here
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
+				myFont: ['"MyFont"', 'sans-serif'],
 			},
 			transitionProperty: {
 				height: "height",
@@ -110,13 +142,13 @@ export default {
 				},
 				cactus: {
 					css: {
-						"--tw-prose-body": theme("colors.textColor / 1"),
-						"--tw-prose-bold": theme("colors.textColor / 1"),
-						"--tw-prose-bullets": theme("colors.textColor / 1"),
-						"--tw-prose-code": theme("colors.textColor / 1"),
+						"--tw-prose-body": theme("colors.foreground / 1"),
+						"--tw-prose-bold": theme("colors.foreground / 1"),
+						"--tw-prose-bullets": theme("colors.foreground / 1"),
+						"--tw-prose-code": theme("colors.foreground / 1"),
 						"--tw-prose-headings": theme("colors.accent-2 / 1"),
 						"--tw-prose-hr": "0.5px dashed #666",
-						"--tw-prose-links": theme("colors.textColor / 1"),
+						"--tw-prose-links": theme("colors.foreground / 1"),
 						"--tw-prose-quotes": theme("colors.quote / 1"),
 						"--tw-prose-th-borders": "#666",
 					},
