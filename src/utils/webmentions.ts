@@ -1,5 +1,6 @@
-import * as fs from "node:fs";
 import type { WebmentionsFeed, WebmentionsCache, WebmentionsChildren } from "@/types";
+
+import * as fs from "node:fs";
 
 const DOMAIN = import.meta.env.SITE;
 const API_TOKEN = import.meta.env.WEBMENTION_API_KEY;

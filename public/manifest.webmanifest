@@ -1,7 +1,7 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "Mehedi Hasan's blog",
+	"short_name": "Mehedi Hasan",
+	"description": "Mehedi Hasan is a web application developer who is trying to make the web a better place for people.",
 	"icons": [
 		{
 			"src": "/192x192.png",
