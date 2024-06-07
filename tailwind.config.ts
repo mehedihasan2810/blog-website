@@ -44,14 +44,9 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				// accent: "hsl(var(--theme-accent) / <alpha-value>)",
 				"accent-2": "hsl(var(--theme-accent-2) / <alpha-value>)",
-				// "accent-2": "hsl(var(--foreground) / <alpha-value>)",
-				// bgColor: "hsl(var(--theme-bg) / <alpha-value>)",
 				link: "hsl(var(--primary) / <alpha-value>)",
-				// quote: "hsl(var(--theme-quote) / <alpha-value>)",
 				quote: "hsl(var(--primary) / <alpha-value>)",
-				// textColor: "hsl(var(--theme-text) / <alpha-value>)",
 
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
